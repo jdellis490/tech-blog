@@ -39,7 +39,6 @@ User.init(
     },
     {
         hooks: {
-            // using the before create hook to let User model to know to hash the password before saving it to the system
             async beforeCreate(newUserData) {
                 newUserData.password = await bcrypt.hash(newUserData.password, 10);
                 return newUserData;
