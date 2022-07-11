@@ -40,6 +40,14 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
+});
+
 //Gets post based on id
 router.get('/post/:id', (req, res) => {
     Post.findOne({
@@ -79,7 +87,7 @@ router.get('/post/:id', (req, res) => {
             return;
         }
         const post = postData.get({ plain: true});
-        res.render('new-post', {
+        res.render('newpost', {
             post,
             loggedIn: req.session.loggedIn
         });

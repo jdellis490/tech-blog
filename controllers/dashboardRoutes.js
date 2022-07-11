@@ -10,7 +10,7 @@ router.get('/', withAuth, (req, res) => {
         attributes: [
             'id',
             'content',
-            'tile',
+            'title',
             'created_at'
         ],
         include: [
@@ -34,8 +34,9 @@ router.get('/', withAuth, (req, res) => {
         ]
     }).then(postData => {
         const posts = postData.map(post => post.get({ plain: true}));
-        res.render('dashboard', {posts, loggedIn: true});
+        res.render('dashboard', {posts, loggedIn: req.session.loggedIn});
     }).catch(err => {
+        console.log(err);
         res.status(500).json(err);
     });
 });
@@ -46,7 +47,7 @@ router.get('/edit/:id', (req, res) => {
             'id',
             'content',
             'title',
-            'create_at'
+            'created_at'
         ],
         include: [
             {
@@ -79,6 +80,7 @@ router.get('/edit/:id', (req, res) => {
         } else { res.status(404).end();
         }
     }).catch(err => {
+        console.log(err);
         res.status(500).json(err);
     });
 });

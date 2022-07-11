@@ -1,0 +1,24 @@
+<section>
+    <div class="container">
+        <h3>Edit Post</h3>
+    <div class="row">
+        <form class="col s12" id="edit-post">
+            <input type="hidden" value="{{post.id}}" id="post-id">
+            <div class="row">
+                <div class="input-field">
+                    <label class="active" for="Title">Title</label>
+                    <textarea type="text" id="title" class="materialize-textarea">{{ post.title}}</textarea>
+                </div>
+                <div>
+                    <label class="label active post-content">Content</label>
+                    <textarea id="content" class="materialize-textarea" name="content">{{post.content}}</textarea>
+                </div>
+            </div>
+            <button class="waves-effect waves-light btn blue" type="submit" name="action">Update Post</button>
+            <button class="waves-effect waves-light btn red" id="delete-post" type="submit" name="action">Delete Post</button>
+        </form>
+    </div>
+</section>
+
+<script src="/js/edit-post.js"></script>
+<script src="/js/delete-post.js"></script>
