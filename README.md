@@ -6,4 +6,8 @@ This project was created to further my knowledge of the MVC paradigm in the form
 
 ## Usage
 
-The use can use the deployed application via Heroku using this link:
+The use can use the deployed application via Heroku using this link: https://tech-blog-justin.herokuapp.com/
+
+Here's screenshot of the application:
+
+<img width="1507" alt="Tech-blog-screenie" src="https://user-images.githubusercontent.com/81279037/178388774-a6e16dd3-63d6-43fb-81cc-80369e6ccdd1.png">
