@@ -6,7 +6,7 @@ This project was created to further my knowledge of the MVC paradigm in the form
 
 ## Usage
 
-The use can use the deployed application via Heroku using this link: https://tech-blog-justin.herokuapp.com/
+The use can use the deployed application via Heroku using this link: https://fast-lake-79619.herokuapp.com/
 
 Here's screenshot of the application:
 
